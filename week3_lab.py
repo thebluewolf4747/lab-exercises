@@ -27,3 +27,25 @@ for row in range(triangle_height):
     for col in range(row + 1):          # this will stop at the fourth iteration if the range was just row.
         print("*",end=" ")
     print()
+
+
+choice = ""
+while choice != "q":
+    print("--- Calculator Menu ---\n1. Add\n2. Subtract\nq. Quit")
+    choice = input("")
+
+
+    if choice == "1":
+        num1 = int(input("Enter a number: "))
+        num2 = int(input("Enter another number: "))
+        sum = num1 + num2
+        print(sum)
+    
+    elif choice == "2":
+        num1 = int(input("Enter a number (the number from which another is subtracted): "))
+        num2 = int(input("Enter another number (the number being subtracted): "))
+        result = num1 - num2
+        print(result)
+    
+    elif choice == "q":
+        print("Goodbye")
