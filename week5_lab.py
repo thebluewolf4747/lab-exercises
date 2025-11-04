@@ -37,5 +37,13 @@ def swim_scene():
 def follow_scene():
     print("You follow the river bank and find a hidden cave. You win!")
 
+def add_points(current_score):
+    # Bug: This creates a new LOCAL variable
+    new_score = current_score + 10
+    return f"[Inside Function] Score is now: {new_score}"
 
-start_scene()
+# --- Main Program ---
+player_score = 10
+print(f"[Outside] Player score is: {player_score}")
+player_score = add_points(player_score)
+print(f"[Outside] Player score is: {player_score}") # Why is it still 0?
