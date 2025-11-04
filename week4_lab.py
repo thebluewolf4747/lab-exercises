@@ -23,16 +23,16 @@ The first print statement (from inside the function) printed the value I am loca
 stored in. The second print statement (outside the function) printed the value that is stored outside the function.
 """
 
-# secret_number = 42
+secret_number = 42
 
-# while True:
-#     user_guess = int(input("Guess the number: "))
+while True:
+    user_guess = int(input("Guess the number: "))
 
-#     if user_guess == secret_number:
-        # print("Congratulations! You guessed it!")
+    if user_guess == secret_number:
+        print("Congratulations! You guessed it!")
     
-#     elif user_guess < secret_number:
-#         print("Too low! Try again.")
+    elif user_guess < secret_number:
+        print("Too low! Try again.")
 
-#     elif user_guess > secret_number:
-#         print("Too high! Try again.")
+    elif user_guess > secret_number:
+        print("Too high! Try again.")
