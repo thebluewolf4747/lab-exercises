@@ -58,6 +58,22 @@ FUNCTION divide(a, b):
     ELSE
         result = a / b
         RETURN RESULT
+    ENDIF
+ENDFUNCTION
+END
+"""
+
+"""
+Pseudocode for to-do list function
+START
+FUNCTION add_new_item(item, list):
+    IF len(list) >= 10:
+        PRINT "List is full"
+        RETURN None
+    ELSE
+        list.append(item)
+        RETURN list, item
+    ENDIF
 ENDFUNCTION
 END
 """
