@@ -1,3 +1,5 @@
+import week4_lab
+
 def start_scene():
     choice1 = input("You are in a dark forest. You see two paths. Do you go 'left' or 'right'?")
     if choice1 == "l" or choice1 == "L" or choice1 == "left" or choice1 == "Left":
@@ -77,3 +79,18 @@ FUNCTION add_new_item(item, list):
 ENDFUNCTION
 END
 """
+
+"""
+Test Plan for celsius to fahrenheit (used imported code from previous week):
+1. Test freezing point (0 → 32)
+2. Test boiling point (100 → 212)
+3. Test room temperature (25 → 77)
+"""
+# --- Unit tests ---
+print("Running tests....")
+
+assert week4_lab.celsius_to_fahrenheit(0) == 32
+assert week4_lab.celsius_to_fahrenheit(100) == 212
+assert week4_lab.celsius_to_fahrenheit(25) == 77
+
+print("All tests passed successfully")
