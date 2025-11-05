@@ -46,4 +46,18 @@ def add_points(current_score):
 player_score = 10
 print(f"[Outside] Player score is: {player_score}")
 player_score = add_points(player_score)
-print(f"[Outside] Player score is: {player_score}") # Why is it still 0?
+print(f"[Outside] Player score is: {player_score}")
+
+"""
+Pseudocode for calculator divide function
+START
+FUNCTION divide(a, b):
+    IF b == 0 THEN
+        PRINT "Error → Cannot divide by 0"
+        RETURN None
+    ELSE
+        result = a / b
+        RETURN RESULT
+ENDFUNCTION
+END
+"""
