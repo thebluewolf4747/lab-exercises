@@ -13,21 +13,21 @@
 
 
 """ Exercise 2 """
-total_actions = 0
-player_level = 1
+# total_actions = 0
+# player_level = 1
 
-# A while loop that runs for levels 1, 2, and 3
-while player_level < 4:
-    print(f"Processing Level {player_level}...")
+# # A while loop that runs for levels 1, 2, and 3
+# while player_level < 4:
+#     print(f"Processing Level {player_level}...")
 
-    # A nested for loop that runs 'player_level' times
-    # e.g., for level 3, it runs 3 times (0, 1, 2)
-    for action in range(player_level):
-        total_actions = total_actions + 1
+#     # A nested for loop that runs 'player_level' times
+#     # e.g., for level 3, it runs 3 times (0, 1, 2)
+#     for action in range(player_level):
+#         total_actions = total_actions + 1
     
-    player_level += 1
+#     player_level += 1
 
-print(f"Total actions: {total_actions}")
+# print(f"Total actions: {total_actions}")
 
 
 """
@@ -49,3 +49,14 @@ total_actions = 6
 Final result: total_actions = 6
 
 """
+
+""" Exercise 1: String Slicing & .split() """
+
+log_data = "SCORE:Player_1:2500"
+parsed_data = log_data.split(":")
+# Print whole list
+print(parsed_data)
+# Print player's name only
+print(parsed_data[1])
+# Print score only
+print(parsed_data[2])
