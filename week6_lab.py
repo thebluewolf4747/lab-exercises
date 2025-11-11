@@ -63,16 +63,31 @@ Final result: total_actions = 6
 
 """ Exercise 2: Lists - The Quiz """
 
-questions = ["What is 2 + 2? ", "What is the capital of France? ", "What keyword defines a function? "]
-answers = ["4", "Paris", "def"]
-score = 0
+# questions = ["What is 2 + 2? ", "What is the capital of France? ", "What keyword defines a function? "]
+# answers = ["4", "Paris", "def"]
+# score = 0
 
-for i in range(len(questions)):
-    user_answer = input(questions[i])
-    if user_answer == answers[i]:
-        print("Correct!")
-        score += 1
-    else:
-        print("Wrong!")
+# for i in range(len(questions)):
+#     user_answer = input(questions[i])
+#     if user_answer == answers[i]:
+#         print("Correct!")
+#         score += 1
+#     else:
+#         print("Wrong!")
 
-print(f"Final Score: {score}")
+# print(f"Final Score: {score}")
+
+""" Exercise 3: Dictionaries - The Phonebook """
+
+phonebook = {}
+phonebook["Alice"] = "555-1234"
+phonebook["Bob"] = "555-5678"
+
+name = input("Who do you want to look up? ")
+
+print(phonebook[name])
+
+phonebook["Charlie"] = "555-9999"
+
+for name, num in phonebook.items():
+    print(f"Name: {name}, Number: {num}")
