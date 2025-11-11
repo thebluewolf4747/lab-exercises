@@ -52,11 +52,27 @@ Final result: total_actions = 6
 
 """ Exercise 1: String Slicing & .split() """
 
-log_data = "SCORE:Player_1:2500"
-parsed_data = log_data.split(":")
-# Print whole list
-print(parsed_data)
-# Print player's name only
-print(parsed_data[1])
-# Print score only
-print(parsed_data[2])
+# log_data = "SCORE:Player_1:2500"
+# parsed_data = log_data.split(":")
+# # Print whole list
+# print(parsed_data)
+# # Print player's name only
+# print(parsed_data[1])
+# # Print score only
+# print(parsed_data[2])
+
+""" Exercise 2: Lists - The Quiz """
+
+questions = ["What is 2 + 2? ", "What is the capital of France? ", "What keyword defines a function? "]
+answers = ["4", "Paris", "def"]
+score = 0
+
+for i in range(len(questions)):
+    user_answer = input(questions[i])
+    if user_answer == answers[i]:
+        print("Correct!")
+        score += 1
+    else:
+        print("Wrong!")
+
+print(f"Final Score: {score}")
