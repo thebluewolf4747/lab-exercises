@@ -47,6 +47,8 @@ def calc_average():
 
 # calc_average()
 
+""" Exercise 3 """
+
 inventory = [
     {"id" : 1, "item" : "Potion", "cost" : 50},
     {"id" : 2, "item" : "Shield", "cost" : 150}
