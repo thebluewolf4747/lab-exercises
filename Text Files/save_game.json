@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "item": "Potion",
+        "cost": 50
+    },
+    {
+        "id": 2,
+        "item": "Shield",
+        "cost": 150
+    },
+    {
+        "id": 3,
+        "item": "Sword",
+        "cost": 100
+    }
+]

@@ -1,4 +1,5 @@
 import csv
+import json
 
 """ Exercise 1 """
 def entry(file):
@@ -44,5 +45,21 @@ def calc_average():
             avg_score = sum(scores) / len(scores)
             return f"{name} - Average Score: {avg_score}"
 
-calc_average()
+# calc_average()
 
+inventory = [
+    {"id" : 1, "item" : "Potion", "cost" : 50},
+    {"id" : 2, "item" : "Shield", "cost" : 150}
+]
+
+def save_inventory(inventory):
+    with open("Text Files/save_game.json", "w") as f:
+        json.dump(inventory, f, indent=4)
+
+def load_inventory():
+    with open("Text Files/save_game.json", "r") as f:
+        file = json.load(f)
+    return file
+
+save_inventory(inventory)
+print(load_inventory())
