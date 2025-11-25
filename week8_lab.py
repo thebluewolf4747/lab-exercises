@@ -10,21 +10,21 @@ students = [
 
 # 2. The loop
 # 'student' is a temporary variable that holds ONE dictionary at a time.
-print("--- Class Results ---")
+# print("--- Class Results ---")
 
-for student in students:
-    # 3. Access specific data using the ["keys"]
-    name = student["name"]
-    score = student["score"]
+# for student in students:
+#     # 3. Access specific data using the ["keys"]
+#     name = student["name"]
+#     score = student["score"]
 
-    # 4. Print it nicely
-    print(f"Student: {name} | Score: {score}")
-    if student["passed"] == True:
-        print("Status: Pass")
-    else:
-        print("Status: Fail")
+#     # 4. Print it nicely
+#     print(f"Student: {name} | Score: {score}")
+#     if student["passed"] == True:
+#         print("Status: Pass")
+#     else:
+#         print("Status: Fail")
 
-print("---------------------")
+# print("---------------------")
 
 
 """ Exercise 2 """
@@ -35,9 +35,23 @@ products = [
     {"item": "Milk", "price": 0.90},
 ]
 
-print("--- Price List ---")
-for product in products:
-    item = product["item"]
-    price = product["price"]
+# print("--- Price List ---")
+# for product in products:
+#     item = product["item"]
+#     price = product["price"]
 
-    print(f"The price of {item} is £{price}.")
+#     print(f"The price of {item} is £{price}.")
+# print("---------------------")
+
+""" Exercise 3 """
+
+fake_api_data = {
+    "status": "success",
+    "total_results": 2,
+    "users": [
+        {"id": 1, "name": "John", "contact": {"email": "john@test.com"}},
+        {"id": 2, "name": "Jane", "contact": {"email": "jane@test.com"}}
+    ]
+}
+
+print(fake_api_data["users"][1]["contact"]["email"])
