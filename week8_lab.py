@@ -1,3 +1,5 @@
+import requests
+
 """ Exercise 1 """
 
 # 1. Create a List of Dictionaries
@@ -54,4 +56,18 @@ fake_api_data = {
     ]
 }
 
-print(fake_api_data["users"][1]["contact"]["email"])
+# print(fake_api_data["users"][1]["contact"]["email"])
+
+""" Exercise 4 """
+url = "https://official-joke-api.appspot.com/random_joke"
+
+# 1. Send the request
+print("Calling the server...")
+response = requests.get(url)
+
+# 2. Check the status code (200 = Success, 404 = Not Found)
+print(f"Status Code: {response.status_code}")
+
+# 3. See the raw test data
+print("Raw data")
+print(response.text)
