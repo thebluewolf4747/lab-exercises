@@ -37,6 +37,7 @@ try:
 
     with open("Text Files/search_history.txt", "a") as f:
         text_str = f"{official_name}: {pop_count:,}\n"
+        f.write(text_str)
 
 except requests.exceptions.HTTPError:
     print(f"Sorry, we couldn't find a country named {country}. Check your spelling.")
