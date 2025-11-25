@@ -46,6 +46,6 @@ except requests.exceptions.ConnectionError:
     print("ERROR: No connection!")
 
 except Exception as e:
-    print("An unexpected error occurred. {e}")
+    print(f"An unexpected error occurred. {e}")
 
 
