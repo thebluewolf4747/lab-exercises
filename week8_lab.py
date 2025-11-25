@@ -25,3 +25,19 @@ for student in students:
         print("Status: Fail")
 
 print("---------------------")
+
+
+""" Exercise 2 """
+
+products = [
+    {"item": "Apple", "price": 0.50},
+    {"item": "Bread", "price": 1.20},
+    {"item": "Milk", "price": 0.90},
+]
+
+print("--- Price List ---")
+for product in products:
+    item = product["item"]
+    price = product["price"]
+
+    print(f"The price of {item} is £{price}.")
