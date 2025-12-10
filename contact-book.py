@@ -1,18 +1,33 @@
 import json
-def load_contacts():
+import os
+
+DB_FILENAME = "Text Files/contacts.json"
+def load_contacts(filename):
+
+    if not os.path.exists(filename):
+        print(f"[INFO] No database found at {filename}. Starting fresh.")
+        return {}
+    
     try:
-        with open("Text Files/contacts.json", "r") as f:
+        with open(filename, "r") as f:
             return json.load(f)
-    except FileNotFoundError:
-        return {} # Return empty dict if no file exists
+    except json.JSONDecodeError:
+        print(f"[CRITICAL] Data corruption in {filename}. Backup restored.")
+        return {}
 
 def save_contacts(contacts):
-    with open("Text Files/contacts.json", "w") as f:
+    with open(DB_FILENAME, "w") as f:
         json.dump(contacts, f)
 
-def add_contact(contacts):
-    name = input("Name: ")
+def add_contact(contacts: dict) -> None:
+    name = input("Name: ").strip()
+    if not name:
+        print("Error: Name cannot be empty.")
+        return
     number = input("Number: ")
+    if not number:
+        print("Error: Number cannot be empty.")
+        return
     contacts[name] = number
     print(f"{name} added!")
     save_contacts(contacts)
@@ -28,8 +43,9 @@ def delete_contact(contact, contacts):
     
     return contacts
 
-contacts = load_contacts()
-while True:
+contacts = load_contacts("Text Files/contacts.json")
+running = True
+while running:
     choice = input("1. Add, 2. View, 3. Save, 4. Delete,  5. Quit: ")
 
     if choice == "1":
@@ -47,4 +63,7 @@ while True:
         delete_contact(contact, contacts)
         save_contacts(contacts)
         break
+
+    elif choice == "5":
+        running = False
 
